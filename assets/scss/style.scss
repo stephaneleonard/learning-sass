@@ -1,0 +1,133 @@
+$font-fam: "Oswald", sans-serif;
+
+@import "./navbar";
+@import "./colors";
+@import "./headings";
+@import "./buttons";
+@import "./footer";
+
+body {
+  font-family: $font-fam;
+}
+
+p {
+  line-height: 145%;
+}
+
+/*-----------------------------------*/
+/*---------------HEADER--------------*/
+/*-----------------------------------*/
+
+header {
+  padding: 80px 200px;
+  background-color: map-get($map: $colors, $key: primary);
+  height: 355px;
+  display: flex;
+
+  img {
+    height: 230px;
+    width: auto;
+  }
+
+  .sec-headerd {
+    padding-left: 80px;
+
+    & * {
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 70px;
+      width: auto;
+      text-align: center;
+    }
+
+    button {
+      @include buttons(map-get($map: $colors, $key: accent), #fff, #fff, block);
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*----------FIRST SECTION------------*/
+/*-----------------------------------*/
+
+.first-section {
+  background-color: white;
+  padding: 20px;
+}
+
+/*-----------------------------------*/
+/*----------SECOND SECTION-----------*/
+/*-----------------------------------*/
+
+.sec-section {
+  background-color: map-get($map: $colors, $key: primary);
+  padding: 0 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+
+  .gr {
+    padding: 30px;
+  }
+}
+
+/*-----------------------------------*/
+/*----------THIRD SECTION------------*/
+/*-----------------------------------*/
+
+.third-section {
+  background-color: white;
+  padding: 20px;
+}
+
+/*-----------------------------------*/
+/*----------FORTH SECTION------------*/
+/*-----------------------------------*/
+
+.forth-section {
+  background-color: map-get($map: $colors, $key: background);
+  padding: 0 400px;
+  .flex {
+    display: flex;
+    flex-flow: row wrap;
+
+    img {
+      margin: 20px;
+      width: auto;
+      height: 45px;
+    }
+  }
+
+  .pas-flex {
+    width: auto;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*-----------------------------------*/
+/*----------FIFTH SECTION------------*/
+/*-----------------------------------*/
+
+.fifth-section {
+  text-align: center;
+  padding: 80px;
+  padding-bottom: 120px;
+
+  .b1{
+    @include buttons(map-get($map: $colors, $key: primary), #fff, #fff , inline-block);
+  }
+
+  .o1 {
+    @include buttons(map-get($map: $colors, $key: accent), #fff, #fff , inline-block);
+  }
+
+}
