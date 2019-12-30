@@ -1,3 +1,11 @@
+@mixin position($type, $left: null, $right: null, $top: null, $bottom: null) { 
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+ }
+
 @mixin buttons($background , $border-color, $text-color , $display) {
   background-color: $background;
   border: 2px solid $border-color;
@@ -17,10 +25,7 @@
 /*-----------------------------------*/
 
 .botom-btn {
-    position:fixed;
+    @include position(fixed, $top: 40px, $left: 40px);
     background-color: #165882;
     border-radius: 100%;
-    right:0;
-    bottom:0;
-    margin: 40px; 
 }
